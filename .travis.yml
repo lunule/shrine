@@ -4,11 +4,10 @@
 # For use with the Shrine WordPress theme.
 # @link https://github.com/lunule/shrine
 
-# Ditch sudo and use containers.
-# @link https://docs.travis-ci.com/user/migrating-from-legacy/#Why-migrate-to-container-based-infrastructure%3F
-# @link https://docs.travis-ci.com/user/workers/container-based-infrastructure/#Routing-your-build-to-container-based-infrastructure
-sudo: false
-dist: trusty
+# Xenial Build Environment.
+# @link https://docs.travis-ci.com/user/reference/overview/#deprecated-virtualization-environments
+# @link https://docs.travis-ci.com/user/reference/xenial/
+dist: xenial
 
 # Declare project language.
 # @link https://about.travis-ci.org/docs/user/languages/php/
@@ -16,7 +15,7 @@ language: php
 
 # Declare versions of PHP to use. Use one decimal max.
 # @link https://docs.travis-ci.com/user/build-configuration/
-matrix:
+jobs:
     fast_finish: true
 
     include:
